@@ -18,6 +18,7 @@
                 </el-header>
                 <!-- 主体 -->
                 <el-main>
+                
                     <router-view></router-view>
                 </el-main>
             </el-container>
@@ -28,6 +29,7 @@
 //引入组件
 import Aside from"../components/Aside";
 import Header from"../components/Header";
+import Breadcrumb from"../components/Breadcrumb";
 export default {
     name:"admin-index",
     data(){
@@ -40,6 +42,7 @@ export default {
     components:{
         "app-aside":Aside,
         "app-header":Header,
+        "breadcrumb": Breadcrumb
     },
     methods:{
         changeCollapse(){

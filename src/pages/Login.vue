@@ -30,9 +30,17 @@ export default {
     methods: {
       submitForm(formName) {
        //获取数据
-       console.log(this.ruleForm2)
+    //    console.log(this.ruleForm2)
        //提交到接口
-       //this.$axios({})
+       this.$axios({
+           url:"admin/account/login",
+           method:"post",
+           data:this.formData,
+           //处理跨域
+           withCredentials:true,
+       })
+
+       
       },
       resetForm(formName) {
           //重置表单
