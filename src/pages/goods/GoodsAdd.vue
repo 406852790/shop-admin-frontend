@@ -16,7 +16,7 @@
 
         <!-- 这种写法很脆弱，不是任何情况下都适合，比如后台修改了数据的category_id的排序，这种循环就不能使用  -->
         <!-- 虽然可以手动排序，但是还是不会出第三级 -->
-        <el-option-group v-for="(item, index) in categorys" 
+        <el-option-group v-for="(item, index) in categorys"
         v-if="item.parent_id === 0"
         :key="index" 
         :label="item.title">
@@ -264,3 +264,32 @@ export default {
 };
 </script>
 <style>
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409eff;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 178px;
+  height: 178px;
+  line-height: 178px;
+  text-align: center;
+}
+.avatar {
+  width: 178px;
+  height: 178px;
+  display: block;
+}
+
+/*   清楚富文本编辑的line-height */
+.editor .el-form-item__content {
+  line-height: unset;
+}
+</style>

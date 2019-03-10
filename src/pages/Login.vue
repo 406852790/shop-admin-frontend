@@ -32,14 +32,17 @@ export default {
        //获取数据
     //    console.log(this.ruleForm2)
        //提交到接口
-       this.$axios({
-           url:"admin/account/login",
-           method:"post",
-           data:this.formData,
-           //处理跨域
-           withCredentials:true,
-       })
-
+    //    this.$axios({
+    //        url:"admin/account/login",
+    //        method:"post",
+    //        data:this.formData,
+    //        //处理跨域
+    //        withCredentials:true,
+    //    })
+        // user/是命名空间
+        this.$store.dispatch("user/login",this.formData).then(()=>{
+            this.$router.back();
+        })
        
       },
       resetForm(formName) {

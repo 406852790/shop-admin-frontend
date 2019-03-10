@@ -8,11 +8,12 @@ import VueRouter from "vue-router";
 import App from './App.vue';
 import Admin from "./pages/Admin";
 import Categorylist from "./pages/category/CategoryList";
+import CategoryAdd from "./pages/category/"
 import GoodsEdit from "./pages/goods/GoodsEdit";
 import GoodsAdd from "./pages/goods/GoodsAdd";
 import Goodslist from "./pages/goods/GoodsList";
 //导入
-import Login from "./pages/Login";
+import Login from "./pages/Login"; 
 
 
 // 注册插件
@@ -30,7 +31,8 @@ const routes=[
     {path:"goods-list", component:Goodslist,meta:"商品列表"},
     {path: "goods-add", component: GoodsAdd, meta: "添加商品"},
     {path: "goods-edit/:id", component:GoodsEdit,meta:"编辑商品"},
-    {path: "category-list", component: Categorylist, meta: "栏目列表"}
+    {path: "category-list", component: Categorylist, meta: "栏目列表"},
+    {path:"category-add", component:CategoryAdd, meta:"新增栏目"}
   ]
 
 }
